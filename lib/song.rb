@@ -60,7 +60,6 @@ class Song
             array = data_song.split(/[-.]/)
           artist =array[0].strip
           song_name  = array[1].strip
-
           song= self.create
           song.name = song_name
           song.artist_name= artist
@@ -69,6 +68,6 @@ class Song
 
         def self.destroy_all
           @@all.clear
-          end
+        end
 
 end
