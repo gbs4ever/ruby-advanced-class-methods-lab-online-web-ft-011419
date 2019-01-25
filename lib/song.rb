@@ -47,25 +47,19 @@ class Song
           @@all.sort_by {|s| s.name        }
         end
         def self.new_from_filename(data_song)
-
-            array =data_song.split(/[-.]/)
-
-            
-
-        artist = array[0].strip
+          array =data_song.split(/[-.]/)
+          artist = array[0].strip
           song_name = array[1].strip
-
             song = self.new
             song.name = song_name
-          song.artist_name = artist
+            song.artist_name = artist
             song
-
-        end
+            end
 
         def self.create_from_filename(data_song)
-            array = data_song.split(" - ")
-          artist =array[0]
-          song_name  = array[1]
+            array = data_song.split(/[-.]/)
+          artist =array[0].strip
+          song_name  = array[1].strip
 
           song= self.create
           song.name = song_name
